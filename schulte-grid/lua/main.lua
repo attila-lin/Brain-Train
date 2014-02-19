@@ -31,6 +31,7 @@ function love.load()
     gameheight = love.graphics.getHeight()
 
     font = love.graphics.newFont("fonts/FZXSHJW.TTF",19)
+    font_big = love.graphics.newFont("fonts/FZXSHJW.TTF",200)
     -- font = love.graphics.newFont("fonts/FZY1JW.TTF",17)
     -- font = love.graphics.newFont("fonts/FZY4JW.TTF",17)
     -- font = love.graphics.newFont("fonts/FZZHYJW.TTF",17)
@@ -40,10 +41,13 @@ function love.load()
     require("game")
 
     menu_load()
-    game_type = 0
+    game_type = 0 -- stand for difficut
     game_numb = 0
-    sound_type = 1
+    sound_type = 1 -- open sound
 
+    count_down = 3
+
+    table_sort = {}
 end
 
 function love.draw()
