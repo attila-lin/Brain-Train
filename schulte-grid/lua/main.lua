@@ -51,6 +51,11 @@ function love.load()
 
     st = 0
     ft = 0
+    wt = 0
+
+    si = -1
+    sj = -1
+    show = 0
 
     table_sort = {}
     next_numb = 1
