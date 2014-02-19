@@ -30,6 +30,7 @@ function love.load()
     gamewidth = love.graphics.getWidth()
     gameheight = love.graphics.getHeight()
 
+    font_lit = love.graphics.newFont("fonts/FZXSHJW.TTF",13)
     font = love.graphics.newFont("fonts/FZXSHJW.TTF",19)
     font_big = love.graphics.newFont("fonts/FZXSHJW.TTF",200)
     -- font = love.graphics.newFont("fonts/FZY1JW.TTF",17)
@@ -39,6 +40,7 @@ function love.load()
 
     require("menu")
     require("game")
+    require("info")
 
     menu_load()
     game_type = 0 -- stand for difficut
@@ -47,7 +49,11 @@ function love.load()
 
     count_down = 3
 
+    st = 0
+    ft = 0
+
     table_sort = {}
+    next_numb = 1
 end
 
 function love.draw()
@@ -55,6 +61,8 @@ function love.draw()
         menu_draw()
     elseif game_state == "game" then
         game_draw(game_type, game_numb)
+    elseif game_state == "info" then
+        info_draw()
     end
 
 end
@@ -64,8 +72,8 @@ function love.mousepressed(x, y, button)
         menu_mousepressed(x,y)
     elseif game_state == "game" then
         game_mousepressed(x,y)
-    elseif game_state == "end" then
-        end_mousepressed(x,y)
+    elseif game_state == "info" then
+        info_mousepressed(x,y)
     end
 end
 

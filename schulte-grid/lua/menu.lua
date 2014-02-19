@@ -1,5 +1,9 @@
 function menu_load()
 	game_state = "menu"
+    game_numb = 0
+
+    count_down = 3
+    love.graphics.setFont(font)
 end
 
 function menu_draw()
