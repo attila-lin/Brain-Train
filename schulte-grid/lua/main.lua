@@ -85,11 +85,19 @@ end
 function love.focus(f) gameIsPaused = not f end
 
 function love.update(dt)
-   if gameIsPaused then return end
+    -- if gameIsPaused then return end
 
+    -- print("dt = " .. dt)
+    -- if count_down ~= -1 then
+    --     if count_down ~= 0 then
+    --         -- print("dt = " .. dt)
+    --     end
+    -- else
+
+    -- end
     -- The rest of your love.update code goes here
 end
 
 function love.quit()
-   print("Thanks for playing! Come back soon!")
+    print("Thanks for playing! Come back soon!")
 end

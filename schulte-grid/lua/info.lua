@@ -32,3 +32,8 @@ function info_mousepressed(x,y)
 		menu_load()
 	end
 end
+
+
+function love.update(dt)
+
+end

@@ -19,7 +19,7 @@ function game_draw()
 			love.graphics.print(count_down, gamewidth / 2 - 60, gameheight / 2 - 100)
 		end
 		count_down = count_down - 1
-		love.timer.sleep(1.2)
+		love.timer.sleep(1)
 		-- print(count_down)
 	-- game begin
 	else
@@ -39,6 +39,7 @@ function game_draw()
 			if show == 1 then
 				show_numb(game_numb)
 				show = 0
+				-- love.timer.sleep(1)
 			end
 		end 
 	end
@@ -153,7 +154,7 @@ function mem_draw(numb)
 		end
 	elseif wt > 1 then
 		dif_draw(numb)
-		-- love.timer.sleep(1)
+		love.timer.sleep(1)
 		wt = wt - 1
 		-- print(wt)
 	else
@@ -192,5 +193,5 @@ function show_numb(numb)
 	else
 		love.graphics.print( number , (gamewidth/2 - width/2) + width * sj / (numb + 1) - 16 ,(gameheight/2 - height/2 ) + height * si / (numb + 1) - 14)
 	end
-	-- love.timer.sleep(0.5)
+	love.timer.sleep(0.5)
 end
